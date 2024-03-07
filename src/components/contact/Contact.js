@@ -1,7 +1,6 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
-import { PhotoIcon, UserCircleIcon } from '@heroicons/react/24/solid';
- import { toast, ToastContainer } from 'react-toastify';
+ import { toast } from 'react-toastify';
  import 'react-toastify/dist/ReactToastify.css';
 
 const Contact = () => {
