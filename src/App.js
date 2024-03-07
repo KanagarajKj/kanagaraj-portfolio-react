@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import './index.css';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
+import Navbar from './components/navbar/Navbar';
+import About from './components/about/About';
+import Social from './components/social/Social';
+import Project from './components/projects/Project';
+import Contact from './components/contact/Contact';
+import Experience from './components/experience/Experience';
+import Skills from './components/skills/Skills';
+import Education from './components/education/Education'
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="">
+      <Navbar />
+      <About />
+      <Skills />
+      <Experience />
+      <Education />
+      <Contact />
+      <ToastContainer />
     </div>
   );
 }

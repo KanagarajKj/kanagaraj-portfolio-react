@@ -1,13 +1,139 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  html {
+    font-family: "Proxima Nova", system-ui, sans-serif;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer components {
+  .title {
+    @apply text-4xl text-center font-semibold ;
+  }
+} 
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+  appearance: textfield;
+  -webkit-appearance: none; /* Chrome, Safari, Edge */
+  margin: 0; /* Optional, to remove default margin */
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+:root{
+    --clr-Background-color:hsl(0, 0%, 90%);
+    --clr-icon-bg-color:hsl(210, 11%, 71%);
+    --clr-shadow-color:hsl(210, 10%, 23%);
+    --clr-facebook:hsl(246, 46%, 37%);
+    --clr-twitter:#00b4d8;
+    --clr-google:#ff8fa3;
+    --clr-instagram:#c9184a;
+}
+
+ul li{
+    list-style-type: none;
+}
+
+/* .container ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 7rem;
+} */
+
+ul li a{
+    display: block;
+    font-size: 50px; 
+    background-color: var(--clr-icon-bg-color);
+    padding: 2rem;
+    transform: rotate(330deg) skew(199deg) translate(0, 0);
+    box-shadow: -20px 20px 15px var(--clr-shadow-color);
+    transition: 0.5s;
+}
+
+ul li a:before{
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: -20px;
+    width: 20px;
+    height: 100%;
+    background-color: var(--clr-icon-bg-color);
+    transform: rotate(0deg) skewY(-45deg);
+}
+
+ul li a:after{
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: -10px;
+    width: 100%;
+    height: 20px;
+    background-color: var(--clr-icon-bg-color);
+    transform: rotate(0deg) skewX(-45deg);
+    transform: 0.8s;
+}
+
+ul li a:hover{
+    transform: skew(10deg) translate(-20px, -20px);
+    transition: 0.5s all ease;
+    color: var(--clr-Background-color);
+}
+
+li:hover:nth-child(1) a:before{
+    background-color: var(--clr-facebook);
+}
+
+li:hover:nth-child(1) a:after{
+    background-color: var(--clr-facebook);
+}
+
+li:hover:nth-child(1) a{
+    background-color: var(--clr-facebook);
+}
+
+li:hover:nth-child(2) a{
+    background-color: var(--clr-twitter);
+}
+
+li:hover:nth-child(2) a:before{
+    background-color: var(--clr-twitter);
+}
+
+li:hover:nth-child(2) a:after{
+    background-color: var(--clr-twitter);
+}
+
+li:hover:nth-child(3) a{
+    background-color: var(--clr-google);
+}
+
+li:hover:nth-child(3) a:before{
+    background-color: var(--clr-google);
+}
+
+li:hover:nth-child(3) a:after{
+     background-color: var(--clr-google);
+}
+
+li:hover:nth-child(4) a{
+    background-color: var(--clr-instagram);
+}
+
+li:hover:nth-child(4) a:after{
+    background-color: var(--clr-instagram);
+}
+
+li:hover:nth-child(4) a:before{
+    background-color: var(--clr-instagram);
 }
