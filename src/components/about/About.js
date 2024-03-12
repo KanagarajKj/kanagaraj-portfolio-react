@@ -1,8 +1,15 @@
-import React from 'react'
+import React from 'react';
 import Typewriter from 'typewriter-effect';
-import {Bio} from '../../contantData/constant';
+import { Bio } from '../../contantData/constant';
+import { DocumentArrowDownIcon } from '@heroicons/react/24/outline';
 
 const About = () => {
+  const openResume = () => {
+    // Replace 'path/to/your/resume.pdf' with the actual path to your PDF file
+    const pdfPath = '/Kanagaraj_resume.pdf';
+    window.open(pdfPath, '_blank');
+  };
+
   return (
     <main
       id="about"
@@ -22,6 +29,17 @@ const About = () => {
         <p className="text-xl text-justify md:w-4/5 w-full text-light-gray-100 font-normal">
           {Bio.description}
         </p>
+        <button
+          onClick={() => openResume()}
+          className="text-left py-2 px-4 bg-lime-600 w-max text-white cursor-pointer text-lg transition-all duration-300 ease-in-out transform 
+        outline-none border-2 hover:border-amber-500 border-opacity-50 rounded-full hover:bg-transparent hover:text-amber-400"
+        >
+          Resume{' '}
+          <DocumentArrowDownIcon
+            className="inline h-5 w-5"
+            aria-hidden="true"
+          />
+        </button>
       </div>
       <div className="image-section w-full">
         <img
@@ -32,6 +50,6 @@ const About = () => {
       </div>
     </main>
   );
-}
+};
 
-export default About
+export default About;
