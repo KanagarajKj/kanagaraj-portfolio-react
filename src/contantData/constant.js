@@ -2,7 +2,7 @@ export const Bio = {
   name: 'Kanagaraj',
   roles: ['Full Stack Developer', 'React Js Developer'],
   description:
-    'I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.',
+    'I am a passionate and dedicated Full Stack Developer specializing in the MERN (MongoDB, Express.js, React, Node.js) stack. With extensive experience in building dynamic, high-performance web applications, I excel in both front-end and back-end development. My focus is on creating efficient, scalable, and user-friendly solutions that meet client needs.',
   github: 'https://github.com/KanagarajKj',
   resume: '#',
   linkedin: '',
@@ -77,23 +77,14 @@ export const skills = [
         image:
           'https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg',
       },
-      {
-        name: 'Postgresql',
-        image: 'https://www.postgresql.org/media/img/about/press/elephant.png',
-      },
+      // {
+      //   name: 'Postgresql',
+      //   image: 'https://www.postgresql.org/media/img/about/press/elephant.png',
+      // },
       {
         name: 'MongoDB',
         image:
           'https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg',
-      },
-      {
-        name: 'Firebase',
-        image: 'https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg',
-      },
-      {
-        name: 'Auth0',
-        image:
-          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1sJ4Oblpz94-Nnfb-yVkawYTit_J7moc58w&usqp=CAU',
       },
     ],
   },
@@ -110,11 +101,11 @@ export const skills = [
         image:
           'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png',
       },
-      // {
-      //   name: 'Docker',
-      //   image:
-      //     'https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg',
-      // },
+      {
+        name: 'Docker',
+        image:
+          'https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg',
+      },
       {
         name: 'Netlify',
         image:
@@ -129,6 +120,15 @@ export const skills = [
         name: 'Postman',
         image:
           'data:image/png;base64,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',
+      },
+      {
+        name: 'Firebase',
+        image: 'https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg',
+      },
+      {
+        name: 'Auth0',
+        image:
+          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1sJ4Oblpz94-Nnfb-yVkawYTit_J7moc58w&usqp=CAU',
       },
     ],
   },

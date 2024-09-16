@@ -13,7 +13,7 @@ const About = () => {
   return (
     <main
       id="about"
-      className="lg:py-20 mt-5 md:mt-24 lg:mt-0 flex flex-col-reverse lg:flex-row about w-full items-center justify-center md:justify-evenly gap-2 px-5 md:px-0"
+      className="lg:py-20 mt-24 md:mt-24 lg:mt-5 flex flex-col-reverse lg:flex-row about w-full items-center justify-center md:justify-evenly gap-2 px-5 md:px-0"
     >
       <div className="flex flex-col gap-3 w-full md:pl-20 pl-0">
         <h1 className="md:text-5xl text-3xl font-bold">Hello, I'm Kanagaraj</h1>
@@ -41,13 +41,13 @@ const About = () => {
           />
         </button>
       </div>
-      <div className="image-section w-full">
+      {/* <div className="image-section w-full">
         <img
           src={'/HeroImage1.png'}
           alt="Profile_Picture"
           className="md:w-96 w-56 mx-auto rounded-full"
         />
-      </div>
+      </div> */}
     </main>
   );
 };
