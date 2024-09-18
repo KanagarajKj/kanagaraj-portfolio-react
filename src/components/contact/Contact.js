@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import emailjs from '@emailjs/browser';
+// import emailjs from '@emailjs/browser';
  import { toast } from 'react-toastify';
  import 'react-toastify/dist/ReactToastify.css';
 
@@ -71,21 +71,21 @@ const Contact = () => {
       return;
     }
 
-      emailjs.sendForm(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID, form.current, process.env.REACT_APP_EMAILJS_PUBLIC_KEY)
-      .then((result) => {
-      console.log(result);
-      setMailData({
-        from_name: '',
-        from_email: '',
-        from_phone: '',
-        message: '',
-      });
-      form.current.reset();
-      setIsBtnActive(false);
-    }, (error) => {
-      setIsBtnActive(false);
-      console.log(error);
-    });
+    //   emailjs.sendForm(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID, form.current, process.env.REACT_APP_EMAILJS_PUBLIC_KEY)
+    //   .then((result) => {
+    //   console.log(result);
+    //   setMailData({
+    //     from_name: '',
+    //     from_email: '',
+    //     from_phone: '',
+    //     message: '',
+    //   });
+    //   form.current.reset();
+    //   setIsBtnActive(false);
+    // }, (error) => {
+    //   setIsBtnActive(false);
+    //   console.log(error);
+    // });
   }
 
   return (
