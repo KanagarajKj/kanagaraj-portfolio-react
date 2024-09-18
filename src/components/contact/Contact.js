@@ -71,7 +71,7 @@ const Contact = () => {
       return;
     }
 
-      emailjs.sendForm('service_sy1zh69', 'template_pdv9t47', form.current, 'rX4z8rXo9Qs5WTTx7')
+      emailjs.sendForm(process.env.serviceID, process.env.templateID, form.current, process.env.publicKey)
       .then((result) => {
       console.log(result);
       setMailData({
