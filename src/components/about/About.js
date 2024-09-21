@@ -6,8 +6,8 @@ import { DocumentArrowDownIcon } from '@heroicons/react/24/outline';
 const About = () => {
   const openResume = () => {
     // Replace 'path/to/your/resume.pdf' with the actual path to your PDF file
-    const pdfPath = '/Kanagaraj_resume.pdf';
-    window.open(pdfPath, '_blank');
+    // const pdfPath = '/Kanagaraj_resume.pdf';
+    // window.open(pdfPath, '_blank');
   };
 
   return (
